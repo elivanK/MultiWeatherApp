@@ -8,7 +8,12 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 public class ServletWeatherAPI implements IWeatherAPI {
-    private final static String baseURL = "http://localhost:8080/WeatherService/weather?";
+
+    private static String baseURL = "http://192.168.2.1:8080/WeatherService/weather?";
+
+    public static void setServer(String server) {
+        ServletWeatherAPI.baseURL = server;
+    }
     private JSONObject weatherdata;
 
     private ServletWeatherAPI(String queryString) throws

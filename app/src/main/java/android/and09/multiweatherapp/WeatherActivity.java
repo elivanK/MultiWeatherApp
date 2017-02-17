@@ -230,7 +230,10 @@ public class WeatherActivity extends AppCompatActivity implements GoogleApiClien
             String locationName = prefs.getString("location_name", ""); //From key to store in String locationName.
             String weatherProviderClass = prefs.getString("weather_provider_class", "");
 
-            //Get coordinates from google client:
+            //Read stored value from the server address PrefEditText:
+            String ServerAddress = prefs.getString("server", "");
+           //Set it into the setServer static method in class ServletWeatherAPI.
+            ServletWeatherAPI.setServer(ServerAddress);
 
             IWeatherAPI api = null;
 

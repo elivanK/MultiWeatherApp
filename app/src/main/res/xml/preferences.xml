@@ -16,5 +16,9 @@
         android:defaultValue="OpenWeatherMapAPI"
         android:entries="@array/provider_names"
         android:entryValues="@array/class_names"/>
+    <EditTextPreference
+        android:summary="http://192.168.2.1:8080/WeatherService/weather?"
+        android:title="Server"
+        android:key="server"/>
 </PreferenceCategory>
 </PreferenceScreen>
